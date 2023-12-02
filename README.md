@@ -287,9 +287,9 @@ netmask 255.255.248.0
 ```sql
 auto eth0
 iface eth0 inet static
-address 198.202.24.2
+address 198.202.16.2
 netmask 255.255.248.0
-gateway 198.202.24.1
+gateway 198.202.16.1
 ```
 
 ### LaubHills (A7)
@@ -297,9 +297,9 @@ gateway 198.202.24.1
 ```sql
 auto eth0
 iface eth0 inet static
-address 198.202.24.3
+address 198.202.16.3
 netmask 255.255.248.0
-gateway 198.202.24.1
+gateway 198.202.16.1
 ```
 
 ### RohrRoad (A8)
@@ -736,7 +736,7 @@ ping 198.204.0.3 -c 3
 ### B1 (LaubHills - AppetitRegion)
 
 ```sql
-ping 198.202.24.2 -c 3
+ping 198.202.16.2 -c 3
 ```
 
 ![Untitled](img/Untitled%202.png)
