@@ -28,7 +28,7 @@
 
 # Subnetting
 
-![Group 2.png](img/Group_2.png)
+![Group 2.png](resources/img/Group_2.png)
 
 | Nama Subnet | Rute | Jumlah IP | Netmask |
 | --- | --- | --- | --- |
@@ -492,11 +492,11 @@ Subnet Mask       : 255.255.252.0
 
 ## GNS 3 Topologi
 
-![Untitled](img/Untitled.png)
+![Untitled](resources/img/Untitled.png)
 
 ## Flow Pembagian CIDR
-![Group 2.png](img/Group_2.png)
-![topologi 1.png](img/topologi_1.png)
+![Group 2.png](resources/img/Group_2.png)
+![topologi 1.png](resources/img/topologi_1.png)
 
 ### Pembagian CIDR
 
@@ -546,7 +546,7 @@ Subnet Mask       : 255.255.252.0
 
 ## Tree
 
-![TREE_CIDR.png](img/TREE_CIDR.png)
+![TREE_CIDR.png](resources/img/TREE_CIDR.png)
 
 ### Pembagian IP
 
@@ -723,9 +723,9 @@ netmask 255.255.248.0
 ```sql
 auto eth0
 iface eth0 inet static
-address 198.202.24.2
+address 198.202.16.2
 netmask 255.255.248.0
-gateway 198.202.24.1
+gateway 198.202.16.1
 ```
 
 ### LaubHills (A7)
@@ -733,9 +733,9 @@ gateway 198.202.24.1
 ```sql
 auto eth0
 iface eth0 inet static
-address 198.202.24.3
+address 198.202.16.3
 netmask 255.255.248.0
-gateway 198.202.24.1
+gateway 198.202.16.1
 ```
 
 ### RohrRoad (A8)
@@ -1167,15 +1167,15 @@ nano /root/.bashrc
 ping 198.204.0.3 -c 3
 ```
 
-![Untitled](img/Untitled%201.png)
+![Untitled](resources/img/Untitled%201.png)
 
 ### B1 (LaubHills - AppetitRegion)
 
 ```sql
-ping 198.202.24.2 -c 3
+ping 198.202.16.2 -c 3
 ```
 
-![Untitled](img/Untitled%202.png)
+![Untitled](resources/img/Untitled%202.png)
 
 ### C1 (RohrRoad - SchewerMountains)
 
@@ -1183,7 +1183,7 @@ ping 198.202.24.2 -c 3
 ping 198.202.0.2 -c 3
 ```
 
-![Untitled](img/Untitled%203.png)
+![Untitled](resources/img/Untitled%203.png)
 
 ### D2 (RiegelCanyon - GranzChannel)
 
@@ -1191,7 +1191,7 @@ ping 198.202.0.2 -c 3
 ping 198.203.16.2 -c 3
 ```
 
-![Untitled](img/Untitled%204.png)
+![Untitled](resources/img/Untitled%204.png)
 
 ### E1 (RohrRoad - Frieren)
 
@@ -1199,7 +1199,7 @@ ping 198.203.16.2 -c 3
 ping 198.202.128.2 -c 3
 ```
 
-![Untitled](img/Untitled%205.png)
+![Untitled](resources/img/Untitled%205.png)
 
 ### F1 (RohrRoad - LakeKorridor)
 
@@ -1207,7 +1207,7 @@ ping 198.202.128.2 -c 3
 ping 198.202.64.2 -c 3
 ```
 
-![Untitled](img/Untitled%206.png)
+![Untitled](resources/img/Untitled%206.png)
 
 ### G1 (RohrRoad - Frieren)
 
@@ -1215,7 +1215,7 @@ ping 198.202.64.2 -c 3
 ping 198.202.128.2 -c 3
 ```
 
-![Untitled](img/Untitled%207.png)
+![Untitled](resources/img/Untitled%207.png)
 
 ### H1 (RohrRoad - GanzChannel)
 
@@ -1223,7 +1223,7 @@ ping 198.202.128.2 -c 3
 ping 198.203.16.2 -c 3
 ```
 
-![Untitled](img/Untitled%208.png)
+![Untitled](resources/img/Untitled%208.png)
 
 ### I1 (RohrRoad - RoyalCapital)
 
@@ -1231,6 +1231,6 @@ ping 198.203.16.2 -c 3
 ping 198.204.0.2 -c 3
 ```
 
-![Untitled](img/Untitled%209.png)
+![Untitled](resources/img/Untitled%209.png)
 
 ## Kendala Pengerjaan
