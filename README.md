@@ -59,7 +59,7 @@
 
 ## Tree VLSM
 
-![vlsm tree.jpeg](img/vlsm%20tree.jpg)
+![vlsm tree.jpeg](resources/img/vlsm%20tree.jpg)
 
 ## Pembagian IP VLSM
 
@@ -486,7 +486,7 @@ Subnet Mask       : 255.255.252.0
 
 ## Simple PDU Test
 
-![pdu test.png](img/pdu%20test.png)
+![pdu test.png](resources/img/pdu%20test.png)
 
 # CIDR GNS 3
 
