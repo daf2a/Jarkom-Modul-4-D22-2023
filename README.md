@@ -10,6 +10,11 @@
 # Daftar Isi
 - [Subnetting](#subnetting)
 - [VLSM CPT](#vlsm-cpt)
+  - [Tree](#tree-vlsm)
+  - [Pembagian IP](#pembagian-ip-vlsm)
+  - [IP Configuration](#ip-configuration-vlsm)
+  - [Routing](#routing-vlsm)
+  - [Simple PDU Test](#simple-pdu-test)
 - [CIDR GNS 3](#cidr-gns-3)
   - [GNS 3 Topologi](#gns-3-topologi)
   - [Flow Pembagian CIDR](#flow-pembagian-cidr)
@@ -51,6 +56,437 @@
 | Total |  | 4255 | /19 |
 
 # VLSM CPT
+
+## Tree VLSM
+
+![vlsm tree.jpeg](img/vlsm%20tree.jpg)
+
+## Pembagian IP VLSM
+
+| Subnet | Network ID | Netmask | Broadcast |
+| --- | --- | --- | --- |
+| A1 | 192.202.7.104 | 255.255.255.252 | 192.202.7.107 |
+| A2 | 192.202.8.0 | 255.255.255.0 | 192.202.8.255 |
+| A3 | 192.202.7.108 | 255.255.255.252 | 192.202.7.111 |
+| A4 | 192.202.7.160 | 255.255.255.224 | 192.202.7.191 |
+| A5 | 192.202.7.112 | 255.255.255.252 | 192.202.7.115 |
+| A6 | 192.202.7.116 | 255.255.255.252 | 192.202.7.119 |
+| A7 | 192.202.24.0 | 255.255.248.0 | 192.202.31.255 |
+| A8 | 192.202.16.0 | 255.255.252.0 | 192.202.19.255 |
+| A9 | 192.202.7.120 | 255.255.255.252 | 192.202.7.123 |
+| A10 | 192.202.7.144 | 255.255.255.248 | 192.202.7.151 |
+| A11 | 192.202.7.124 | 255.255.255.252 | 192.202.7.127 |
+| A12 | 192.202.7.128 | 255.255.255.252 | 192.202.7.131 |
+| A13 | 192.202.7.152 | 255.255.255.248 | 192.202.7.159 |
+| A14 | 192.202.7.132 | 255.255.255.252 | 192.202.7.135 |
+| A15 | 192.202.20.0 | 255.255.252.0 | 192.202.23.255 |
+| A16 | 192.202.9.0 | 255.255.255.0 | 192.202.9.255 |
+| A17 | 192.202.7.136 | 255.255.255.252 | 192.202.7.139 |
+| A18 | 192.202.10.0 | 255.255.254.0 | 192.202.11.255 |
+| A19 | 192.202.7.140 | 255.255.255.252 | 192.202.7.143 |
+| A20 | 192.202.7.192 | 255.255.255.192 | 192.202.7.255 |
+| A21 | 192.202.12.0 | 255.255.252.0 | 192.202.15.255 |
+
+## IP Configuration VLSM
+
+### Aura (A1)
+```sql
+IPv4 Address  : 192.202.7.105
+Subnet Mask   : 255.255.255.252
+```
+
+### Denken (A1)
+```sql
+IPv4 Address  : 192.202.7.106
+Subnet Mask   : 255.255.255.252
+```
+
+### Denken (A2)
+```sql
+IPv4 Address  : 192.202.8.1
+Subnet Mask   : 255.255.255.0
+```
+
+### RoyalCapital (A2)
+```sql
+Default Gateaway  : 192.202.8.1
+IPv4 Address      : 192.202.8.2
+Subnet Mask       : 255.255.255.0
+```
+
+### WilleRegion (A2)
+```sql
+Default Gateaway  : 192.202.8.1
+IPv4 Address      : 192.202.8.65
+Subnet Mask       : 255.255.255.0
+```
+
+### Aura (A3)
+```sql
+IPv4 Address  : 192.202.7.109
+Subnet Mask   : 255.255.255.252
+```
+
+### Frieren (A3)
+```sql
+IPv4 Address  : 192.202.7.110
+Subnet Mask   : 255.255.255.252
+```
+
+### Frieren (A4)
+```sql
+IPv4 Address  : 192.202.7.161
+Subnet Mask   : 255.255.255.224
+```
+
+### LakeKorridor (A4)
+```sql
+Default Gateaway  : 192.202.7.161
+IPv4 Address      : 192.202.7.162
+Subnet Mask       : 255.255.255.224
+```
+
+### Frieren (A5)
+```sql
+IPv4 Address  : 192.202.7.113
+Subnet Mask   : 255.255.255.252
+```
+
+### Flamme (A5)
+```sql
+IPv4 Address  : 192.202.7.114
+Subnet Mask   : 255.255.255.252
+```
+
+### Flame (A6)
+```sql
+IPv4 Address  : 192.202.7.117
+Subnet Mask   : 255.255.255.252
+```
+
+### Fern (A6)
+```sql
+IPv4 Address  : 192.202.7.118
+Subnet Mask   : 255.255.255.252
+```
+
+### Fern (A7)
+```sql
+IPv4 Address  : 192.202.24.1
+Subnet Mask   : 255.255.248.0
+```
+
+### LaubHills (A7)
+```sql
+Default Gateaway  : 192.202.24.1
+IPv4 Address      : 192.202.24.2
+Subnet Mask       : 255.255.248.0
+```
+
+### AppetitRegion (A7)
+```sql
+Default Gateaway  : 192.202.24.1
+IPv4 Address      : 192.202.25.143
+Subnet Mask       : 255.255.248.0
+```
+
+### Flamme (A8)
+```sql
+IPv4 Address  : 192.202.16.1
+Subnet Mask   : 255.255.252.0
+```
+
+### RohrRoad (A8)
+```sql
+Default Gateaway  : 192.202.16.1
+IPv4 Address      : 192.202.16.2
+Subnet Mask       : 255.255.252.0
+```
+
+### Flamme (A9)
+```sql
+IPv4 Address  : 192.202.7.121
+Subnet Mask   : 255.255.255.252
+```
+
+### Himmel (A9)
+```sql
+IPv4 Address  : 192.202.7.122
+Subnet Mask   : 255.255.255.252
+```
+
+### Himmel (A10)
+```sql
+IPv4 Address  : 192.202.7.145
+Subnet Mask   : 255.255.255.248
+```
+
+### SchwerMountains (A10)
+```sql
+Default Gateaway  : 192.202.7.145
+IPv4 Address      : 192.202.16.2
+Subnet Mask       : 255.255.252.0
+```
+
+### Aura (A11)
+```sql
+IPv4 Address  : 192.202.7.125
+Subnet Mask   : 255.255.255.252
+```
+
+### Eisen (A11)
+```sql
+IPv4 Address  : 192.202.7.126
+Subnet Mask   : 255.255.255.252
+```
+
+### Eisen (A12)
+```sql
+IPv4 Address  : 192.202.7.129
+Subnet Mask   : 255.255.255.252
+```
+
+### Stark (A12)
+```sql
+Default Gateaway  : 192.202.7.129
+IPv4 Address      : 192.202.7.130
+Subnet Mask       : 255.255.255.252
+```
+
+### Eisen (A13)
+```sql
+IPv4 Address  : 192.202.7.153
+Subnet Mask   : 255.255.255.248
+```
+
+### Ritcher (A13)
+```sql
+Default Gateaway  : 192.202.7.153
+IPv4 Address      : 192.202.7.154
+Subnet Mask       : 255.255.255.248
+```
+
+### Revolte (A13)
+```sql
+Default Gateaway  : 192.202.7.153
+IPv4 Address      : 192.202.7.155
+Subnet Mask       : 255.255.255.248
+```
+
+### Eisen (A14)
+```sql
+IPv4 Address  : 192.202.7.133
+Subnet Mask   : 255.255.255.252
+```
+
+### Lugner (A14)
+```sql
+IPv4 Address  : 192.202.7.134
+Subnet Mask   : 255.255.255.252
+```
+
+### Lugner (A15)
+```sql
+IPv4 Address  : 192.202.20.1
+Subnet Mask   : 255.255.252.0
+```
+
+### TurkRegion (A15)
+```sql
+Default Gateaway  : 192.202.20.1
+IPv4 Address      : 192.202.20.2
+Subnet Mask       : 255.255.252.0
+```
+
+### Lugner (A16)
+```sql
+IPv4 Address  : 192.202.9.1
+Subnet Mask   : 255.255.255.0
+```
+
+### GrobeForest (A16)
+```sql
+Default Gateaway  : 192.202.9.1
+IPv4 Address      : 192.202.9.2
+Subnet Mask       : 255.255.255.0
+```
+
+### Eisen (A17)
+```sql
+IPv4 Address  : 192.202.7.137
+Subnet Mask   : 255.255.255.252
+```
+
+### Linie (A17)
+```sql
+IPv4 Address  : 192.202.7.138
+Subnet Mask   : 255.255.255.252
+```
+
+### Linie (A18)
+```sql
+IPv4 Address  : 192.202.10.1
+Subnet Mask   : 255.255.254.0
+```
+
+### GranzChannel (A18)
+```sql
+Default Gateaway  : 192.202.9.1
+IPv4 Address      : 192.202.9.2
+Subnet Mask       : 255.255.255.0
+```
+
+### Linie (A19)
+```sql
+IPv4 Address  : 192.202.7.141
+Subnet Mask   : 255.255.255.252
+```
+
+### Lawine (A19)
+```sql
+IPv4 Address  : 192.202.7.142
+Subnet Mask   : 255.255.255.252
+```
+
+### Lawine (A20)
+```sql
+IPv4 Address  : 192.202.7.193
+Subnet Mask   : 255.255.255.192
+```
+
+### BredtRegion (A20)
+```sql
+Default Gateaway  : 192.202.7.193
+IPv4 Address      : 192.202.7.195
+Subnet Mask       : 255.255.255.192
+```
+
+### Heiter (A20)
+```sql
+IPv4 Address  : 192.202.7.194
+Subnet Mask   : 255.255.255.192
+```
+
+### Heiter (A21)
+```sql
+IPv4 Address  : 192.202.12.1
+Subnet Mask   : 255.255.252.0
+```
+
+### Sein (A21)
+```sql
+Default Gateaway  : 192.202.12.1
+IPv4 Address      : 192.202.12.2
+Subnet Mask       : 255.255.252.0
+```
+
+### RiegelCanyon (A21)
+```sql
+Default Gateaway  : 192.202.12.1
+IPv4 Address      : 192.202.12.3
+Subnet Mask       : 255.255.252.0
+```
+
+## Routing VLSM
+
+### Aura
+```sql
+192.202.8.0/24 via 192.202.7.106
+192.202.7.160/27 via 192.202.7.110
+192.202.7.112/30 via 192.202.7.110
+192.202.7.116/30 via 192.202.7.110
+192.202.24.0/21 via 192.202.7.110
+192.202.16.0/22 via 192.202.7.110
+192.202.7.120/30 via 192.202.7.110
+192.202.7.152/29 via 192.202.7.126
+192.202.7.132/30 via 192.202.7.126
+192.202.20.0/22 via 192.202.7.126
+192.202.9.0/24 via 192.202.7.126
+192.202.7.136/30 via 192.202.7.126
+192.202.10.0/23 via 192.202.7.126
+192.202.7.140/30 via 192.202.7.126
+192.202.7.192/26 via 192.202.7.126
+192.202.12.0/22 via 192.202.7.126
+192.202.7.104/30 via 192.202.7.106
+192.202.7.108/30 via 192.202.7.110
+192.202.7.124/30 via 192.202.7.126
+```
+
+### Denken
+```sql
+0.0.0.0/0 via 192.202.7.105
+```
+
+### Frieren
+```sql
+0.0.0.0/0 via 192.202.7.109
+192.202.7.116/30 via 192.202.7.114
+192.202.24.0/21 via 192.202.7.114
+192.202.16.0/22 via 192.202.7.114
+192.202.7.120/30 via 192.202.7.114
+192.202.7.144/29 via 192.202.7.114
+192.202.7.112/30 via 192.202.7.114
+```
+
+### Flamme
+```sql
+0.0.0.0/0 via 192.202.7.113
+192.202.24.0/21 via 192.202.7.118
+192.202.7.144/29 via 192.202.7.122
+192.202.7.116/30 via 192.202.7.118
+192.202.7.120/30 via 192.202.7.122
+```
+### Fern
+```sql
+0.0.0.0/0 via 192.202.7.117
+```
+
+### Himmel
+```sql
+0.0.0.0/0 via 192.202.7.121
+```
+
+### Eisen
+```sql
+0.0.0.0/0 via 192.202.7.125
+192.202.20.0/22 via 192.202.7.134
+192.202.9.0/24 via 192.202.7.134
+192.202.10.0/23 via 192.202.7.138
+192.202.7.140/30 via 192.202.7.138
+192.202.7.192/26 via 192.202.7.138
+192.202.12.0/22 via 192.202.7.138
+192.202.7.132/30 via 192.202.7.134
+192.202.7.136/30 via 192.202.7.138
+```
+
+### Lugner
+```sql
+0.0.0.0/0 via 192.202.7.133
+```
+
+### Linie
+```sql
+0.0.0.0/0 via 192.202.7.137
+192.202.7.192/26 via 192.202.7.142
+192.202.12.0/22 via 192.202.7.142
+192.202.7.140/30 via 192.202.7.142
+```
+
+### Lawine
+```sql
+0.0.0.0/0 via 192.202.7.141
+192.202.12.0/22 via 192.202.7.194
+192.202.7.192/26 via 192.202.7.194
+```
+
+### Heiter
+```sql
+0.0.0.0/0 via 192.202.7.193
+```
+
+## Simple PDU Test
+
+![pdu test.png](img/pdu%20test.png)
 
 # CIDR GNS 3
 
